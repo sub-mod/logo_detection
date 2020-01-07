@@ -1,0 +1,8 @@
+item{
+       id:1
+       name:'dynatrace_logo'
+      }
+item{
+       id:2
+       name: 'dynatrace_text'
+      }

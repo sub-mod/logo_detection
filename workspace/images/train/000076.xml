@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dynatrace</folder>
+	<filename>000076.jpg</filename>
+	<path>/home/sanjay/FinalObjectDetection/Downloads/data/dynatrace/000076.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2572</width>
+		<height>1914</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dynatrace_logo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>31</xmin>
+			<ymin>74</ymin>
+			<xmax>136</xmax>
+			<ymax>184</ymax>
+		</bndbox>
+	</object>
+</annotation>
