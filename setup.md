@@ -269,3 +269,13 @@ Ensure that PYTHONPATH has not changed.Objection detection apis will be used in 
 ▶ jupyter lab
 Open inference.ipynb
 ```
+
+Few Useful Commands:  
+```
+ll *.jpg |wc -l ; ll *.png |wc -l ; ll *.xml |wc -l
+ls -1 *.png | xargs -n 1 bash -c 'convert "$0" "${0%.png}.jpg"'
+for f in *.xml; do echo "Processing $f file.." && sed -i 's/png/jpg/g' $f ; done
+for f in *.xml; do cat $f|grep "jpg"; done
+for f in *.xml; do cat $f|grep "png"; done
+for f in *.xml; do mv $f IBM_$f; done 
+```
