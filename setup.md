@@ -126,6 +126,13 @@ drwxr-xr-x 2 suku suku 4.0K Jan  6 21:11 test
 drwxr-xr-x 2 suku suku 8.0K Jan  6 21:11 train
 ```
 
+```
+#on mac
+virtualenv -p python3 env
+source env/bin/activate
+labelImg
+```
+
 #### Convert the xml files to csv files
 ```
 ▶ ll scripts
@@ -274,6 +281,7 @@ Few Useful Commands:
 ```
 ll *.jpg |wc -l ; ll *.png |wc -l ; ll *.xml |wc -l
 ls -1 *.png | xargs -n 1 bash -c 'convert "$0" "${0%.png}.jpg"'
+ls -1 *.jpg | head -n 100 | xargs -n 1 bash -c 'cp "$0" ../100files/'
 for f in *.xml; do echo "Processing $f file.." && sed -i 's/png/jpg/g' $f ; done
 for f in *.xml; do cat $f|grep "jpg"; done
 for f in *.xml; do cat $f|grep "png"; done
