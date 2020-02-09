@@ -120,6 +120,8 @@ Separate the data into 2 sets train and test.
 ▶ cd ../
 ▶ ls
 annotations  images  my_project  pre-trained-model  scripts
+▶ cd images
+▶ mkdir -p test train
 ▶ ll images
 total 16K
 drwxr-xr-x 2 suku suku 4.0K Jan  6 21:11 test
@@ -286,4 +288,7 @@ for f in *.xml; do echo "Processing $f file.." && sed -i 's/png/jpg/g' $f ; done
 for f in *.xml; do cat $f|grep "jpg"; done
 for f in *.xml; do cat $f|grep "png"; done
 for f in *.xml; do mv $f IBM_$f; done 
+
+ls -1 *.jpg | head -n 1 | xargs -n 1 bash -c 'IN="$0"; IFS='.' read -ra NAMES <<< "$IN"; ls -1 ${NAMES[0]}*'
+ls -1 eight*.jpg | head -n 1 | xargs -n 1 bash -c 'IN="$0"; IFS='.' read -ra NAMES <<< "$IN"; cp ${NAMES[0]}* ../train'
 ```
